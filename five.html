@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>กฎการในการออกจากห้องเรียนที่25</title>
+    <style>
+      div {
+        background-image: url("https://cdn.discordapp.com/attachments/917132328428535899/1148280843664638054/room.jpg");
+        background-repeat: no-repeat;
+      }
+      body {
+        color: red;
+        font-family: 'Itim', cursive;
+      }
+  
+      button {
+        color: red;
+      }
+  
+      div#welcome {
+        color: blue;
+      }
+    </style>
+</head>
+<body color: red; style="background-image: url('https://cdn.discordapp.com/attachments/917132328428535899/1148301188404621342/backroom.jpg'); background-repeat: no-repeat;
+background-size: cover; background-position: center center;">
+  <h1>คุณวิ่งออกมาถึงประตูทางออกสุดท้าย...มีประตูสีแดงอยู่</h1></br>
+  <h2>ไอ้หนูทางนี้❗</h2></br>
+  <p>คุณจะทำอย่างไร</p>
+  <input type="radio" name="answer" value="1"> ท่องนะโมหลับตาวิ่งไปที่ประตู
+  <input type="radio" name="answer" value="2"> หยุดหันมองไปทางต้นเสียง
+  <input type="radio" name="answer" value="3"> วิ่งสุดชีวิต
+  <br>
+  <input type="submit" value="ยืนยันคำตอบ" >
+
+  
+
+  <script>
+
+    function checkAnswer() {
+      var answer = document.querySelector('input[name="answer"]:checked').value;
+      var ans1 = ["1"];
+      var ans2 = ["2"];
+      var ans3 = ["3"];
+      var message01 = document.createElement("h1");
+      if (ans1.includes(answer)) {
+        message01.textContent = "บทสวดยังช่วยคุณเสมอ";
+        message01.style.fontSize = "72px";
+        document.body.appendChild(message01);
+      // หน่วงเวลา 5 วินาที
+      setTimeout(function() {
+        document.querySelector('input[type="submit"]').addEventListener('click', checkAnswer);
+        window.location.href = "final.html";
+        }, 3000);
+        return false;
+      } 
+      if (ans2.includes(answer)) {
+        message01.textContent = "คอคุณขาด(คุณตาย)";
+        message01.style.fontSize = "72px";
+        document.body.appendChild(message01);
+      // หน่วงเวลา 5 วินาที
+      setTimeout(function() {
+        document.querySelector('input[type="submit"]').addEventListener('click', checkAnswer);
+        window.location.href = "first.html";
+        }, 3000);
+        return false;
+      } else {
+        message01.textContent = "คุณผ่านประตูสีแดงได้แล้ว";
+        message01.style.fontSize = "72px";
+        document.body.appendChild(message01);
+        setTimeout(function() {
+        window.location.href = "final.html";
+
+      }, 3000);
+      }
+    }
+
+    document.querySelector('input[type="submit"]').addEventListener('click', checkAnswer);
+  </script>
+  <div class="correct" style="display: none;">
+    <p>ยินดีด้วย! คุณตอบถูกแล้ว</p>
+  </div>
+ 
+</body>
+</html>

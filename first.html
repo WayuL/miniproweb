@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <title>กฎการในการออกจากห้องเรียนที่25</title>
+  <style>
+    div {
+      background-image: url("https://cdn.discordapp.com/attachments/917132328428535899/1148280843664638054/room.jpg");
+      background-repeat: no-repeat;
+    }
+    body {
+      color: red;
+      font-family: 'Itim', cursive;
+    }
+
+    button {
+      color: red;
+    }
+
+    div#welcome {
+      color: blue;
+    }
+  </style>
+</head>
+<body color: red; style="background-image: url('https://cdn.discordapp.com/attachments/917132328428535899/1148301188404621342/backroom.jpg'); background-repeat: no-repeat;
+background-size: cover; background-position: center center;">
+  <h1> &nbsp;&nbsp;&nbsp;&nbsp;    เรื่องเล่าในการเอาชีวิตรอดจากห้องเรียนที่25</h1>
+
+  <p style="size: 40px;">
+
+    &nbsp;&nbsp;คุณตื่นมาอยู่หน้าโต๊ะคอมของห้องที่25 โดยที่ก่อนหน้านี้คุณจำได้ว่าคุณเดินอยู่ในสวน </br>
+      ด้านหน้าของคุณมีกระดาษวางอยู่</br>
+      กฏในการออกจากห้องเรียนที่25</br>
+      หลังจากนั้นแสงไฟในห้องนั้นก็ดับ</br>
+      คุณรีบเปิดอ่านทันที</br>
+
+  </p>
+
+  <button onclick="checkRules()">ยืนยัน</button>
+
+  <script>
+    function checkRules() {
+
+      // หน่วงเวลา 5 วินาที
+      setTimeout(function() {
+        window.location.href = "rule.html";
+      }, 1000);
+      document.getElementById("welcome").innerHTML = "ยินดีต้อนรับ";
+      return true;
+    }
+  </script>
+
+  <div id="welcome"></div>
+</body>
+</html>

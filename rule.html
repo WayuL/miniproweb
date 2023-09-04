@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <title>กฎการในการออกจากห้องเรียนที่25</title>
+  <style>
+    div {
+      background-image: url("https://cdn.discordapp.com/attachments/917132328428535899/1148280843664638054/room.jpg");
+      background-repeat: no-repeat;
+    }
+    body {
+      color: red;
+      font-family: 'Itim', cursive;
+    }
+
+    button {
+      color: red;
+    }
+
+    div#welcome {
+      color: blue;
+    }
+  </style>
+</head>
+<body color: red; style="background-image: url('https://cdn.discordapp.com/attachments/917132328428535899/1148301188404621342/backroom.jpg'); background-repeat: no-repeat;
+background-size: cover; background-position: center center;">
+
+  <h1 >กฏในการออกจากห้องเรียนที่25</h1></br>
+  <h3  >ถ้าคุณได้อ่านกระดาษใบนี้แสดงว่า   ซวย!แล้ว</h3>
+
+  <p >
+    <ol>
+      <li>กฏข้อที่1 เมื่อประตูห้องเปิดให้ดูว่ามีแสงไฟจากไฟฉายไหม ถ้าเป็นอย่างอื่นมุดลงได้โต๊ะซ่ะ</li>
+      <li >กฏข้อที่2 ยามจะพกนกหวีดเสมอ</li>
+      <li >กฏข้อที่3 ประตูสีแดงคือโชคดี</li>
+      <li >กฏข้อที่4 ไม่มีคนปกติอยู่ในที่แห่งนี้</li>
+    </ol>
+  </p>
+
+  <input type="checkbox" id="agree" /> ฉันเข้าใจแล้ว
+  <button onclick="checkRules()">ยืนยัน</button>
+
+  <script>
+    function checkRules() {
+      // ตรวจสอบว่าผู้ใช้ได้ยอมรับกฎการใช้งานหรือไม่
+      var agree = document.getElementById("agree").checked;
+      if (!agree) {
+        // แสดงข้อความแจ้งเตือน
+        alert("กรุณายอมรับกฎการใช้งานก่อนใช้งานเว็บไซต์");
+        return false;
+      }
+
+      // ดำเนินการต่อ
+      window.location.href = "next_page.html";
+
+      // แสดงข้อความต้อนรับ
+      document.getElementById("welcome").innerHTML = "ยินดีต้อนรับ";
+      return true;
+    }
+  </script>
+
+  <div id="welcome"></div>
+</body>
+</html>

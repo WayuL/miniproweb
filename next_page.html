@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <title>กฎการในการออกจากห้องเรียนที่25</title>
+  <style>
+    div {
+      background-image: url("https://cdn.discordapp.com/attachments/917132328428535899/1148280843664638054/room.jpg");
+      background-repeat: no-repeat;
+    }
+    body {
+      color: red;
+      font-family: 'Itim', cursive;
+    }
+
+    button {
+      color: red;
+    }
+
+    div#welcome {
+      color: blue;
+    }
+  </style>
+</head>
+<body color: red; style="background-image: url('https://cdn.discordapp.com/attachments/917132328428535899/1148301188404621342/backroom.jpg'); background-repeat: no-repeat;
+background-size: cover; background-position: center center;">
+  <h1>คุนวางกระดาษลงแล้วยุๆไฟในห้องก็ดับลงคุนจึงทำ....</h1>
+  <p>คุณจะทำอย่างไร</p>
+  <input type="radio" name="answer" value="1"> ท่องน้ำโมสามจบ
+  <input type="radio" name="answer" value="2"> หลับตาแอบเงียบๆ
+  <input type="radio" name="answer" value="3"> ยื่นหน้าไปดูว่าเกิดอะไรขึ้น
+  <input type="radio" name="answer" value="4"> ลุกขึ้นวิ่งไปทางประตู
+  <br>
+  <input type="submit" value="ยืนยันคำตอบ" >
+
+  
+
+  <script>
+
+    function checkAnswer() {
+      var answer = document.querySelector('input[name="answer"]:checked').value;
+      var ans1 = ["1"];
+      var ans2 = ["2"];
+      var ans3 = ["3"];
+      var ans4 = ["4"];
+      var message01 = document.createElement("h1");
+      if (ans1.includes(answer)) {
+        message01.textContent = "หลวงพ่อยังเข้าข้างคุณ";
+        message01.style.fontSize = "72px";
+        document.body.appendChild(message01);
+      // หน่วงเวลา 5 วินาที
+      setTimeout(function() {
+        document.querySelector('input[type="submit"]').addEventListener('click', checkAnswer);
+        window.location.href = "three.html";
+        }, 3000);
+        return false;
+      } 
+      if (ans2.includes(answer)) {
+        message01.textContent = "ความมืดมันหน้ากลัวแต่มันก็ทำให้คุณรอด";
+        message01.style.fontSize = "72px";
+        document.body.appendChild(message01);
+      // หน่วงเวลา 5 วินาที
+      setTimeout(function() {
+        document.querySelector('input[type="submit"]').addEventListener('click', checkAnswer);
+        window.location.href = "three.html";
+        }, 3000);
+      } else {
+        message01.textContent = "บทสวดคือทางออก (คุณตาย)";
+        message01.style.fontSize = "72px";
+        document.body.appendChild(message01);
+        setTimeout(function() {
+        window.location.href = "rule.html";
+
+      }, 3000);
+      }
+    }
+
+    document.querySelector('input[type="submit"]').addEventListener('click', checkAnswer);
+  </script>
+
+ 
+</body>
+</html>

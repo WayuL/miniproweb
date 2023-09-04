@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>กฎการในการออกจากห้องเรียนที่25</title>
+    <style>
+      div {
+        background-image: url("https://cdn.discordapp.com/attachments/917132328428535899/1148280843664638054/room.jpg");
+        background-repeat: no-repeat;
+      }
+      body {
+        color: red;
+        font-family: 'Itim', cursive;
+      }
+  
+      button {
+        color: red;
+      }
+  
+      div#welcome {
+        color: blue;
+      }
+    </style>
+</head>
+<body color: red; style="background-image: url('https://cdn.discordapp.com/attachments/917132328428535899/1148301188404621342/backroom.jpg'); background-repeat: no-repeat;
+background-size: cover; background-position: center center;">
+  <h1>คุณวิ่งออกจากห้องมาเจอยามยืนอยู่ด้านหน้าคุณ👮‍♂️</h1></br>
+  <h2>ไฟฉายในมือของยามถูกฉายมาที่คุณ</h2></br>
+  <h2>แต่เขาไม่มีนกหวีด❓</h2></br>
+  <p>คุณจะทำอย่างไร</p>
+  <input type="radio" name="answer" value="1"> ท่องน้ำโม
+  <input type="radio" name="answer" value="2"> ถามยามว่าเกิดอะไรขึ้น!
+  <input type="radio" name="answer" value="3"> เอาใบไม้ขึ้นมาทัดหู
+  <br>
+  <input type="submit" value="ยืนยันคำตอบ" >
+
+  
+
+  <script>
+
+    function checkAnswer() {
+      var answer = document.querySelector('input[name="answer"]:checked').value;
+      var ans1 = ["1"];
+      var ans2 = ["2"];
+      var ans3 = ["3"];
+      var message01 = document.createElement("h1");
+      if (ans1.includes(answer)) {
+        message01.textContent = "ยามหายไป(บบทสวดคุณยังศักดิ์สิทธิ์อยู่)";
+        message01.style.fontSize = "72px";
+        document.body.appendChild(message01);
+      // หน่วงเวลา 5 วินาที
+      setTimeout(function() {
+        document.querySelector('input[type="submit"]').addEventListener('click', checkAnswer);
+        window.location.href = "five.html";
+        }, 3000);
+        return false;
+      } 
+      if (ans2.includes(answer)) {
+        message01.textContent = "ยามเดินเข้ามาหักคอ(คุณตาย)";
+        message01.style.fontSize = "72px";
+        document.body.appendChild(message01);
+      // หน่วงเวลา 5 วินาที
+      setTimeout(function() {
+        document.querySelector('input[type="submit"]').addEventListener('click', checkAnswer);
+        window.location.href = "first.html";
+        }, 3000);
+        return false;
+      } else {
+        message01.textContent = "ยามได้เดินผ่านคุณไป";
+        message01.style.fontSize = "72px";
+        document.body.appendChild(message01);
+        setTimeout(function() {
+        window.location.href = "five.html";
+
+      }, 3000);
+      }
+    }
+
+    document.querySelector('input[type="submit"]').addEventListener('click', checkAnswer);
+  </script>
+  <div class="correct" style="display: none;">
+    <p>ยินดีด้วย! คุณตอบถูกแล้ว</p>
+  </div>
+ 
+</body>
+</html>
